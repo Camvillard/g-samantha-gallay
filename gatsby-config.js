@@ -15,6 +15,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // sass styles
+    `gatsby-plugin-sass`,
     {
      resolve: `gatsby-source-wordpress`,
      options: {

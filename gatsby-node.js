@@ -1,4 +1,8 @@
+const path = require('path');
+
 exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
   const createWpPosts = new Promise((resolve, reject) => {
     const query = graphql(`
       {
@@ -14,10 +18,27 @@ exports.createPages = ({ graphql, actions }) => {
     `)
 
     query.then(result => {
-      console.log(JSON.stringify(result, null, 4))
+      if (result.errors) {
+        console.error(results.errors)
+        reject(result.error)
+      }
+
+      const postEdges = result.data.allWordpressPost.edges
+
+      postEdges.forEach(edge => {
+        createPage({
+          path: `/${edge.node.slug}`,
+          component: path.resolve(`./src/templates/post.jsx`),
+          context: {
+            id: edge.node.id,
+          },
+        })
+      })
       resolve()
     }) // query.then
   }) // createWpPosts
 
   return Promise.all([createWpPosts])
 } // createPages
+
+
