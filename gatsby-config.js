@@ -2,8 +2,8 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `Samantha Gallay | Avocat`,
-    description: `avocat à Bordeaux`,
+    title: `starter wp`,
+    description: `starter for gatsby + wp`,
     author: `cdltbisou`,
   },
   plugins: [
