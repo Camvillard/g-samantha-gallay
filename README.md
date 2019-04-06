@@ -20,7 +20,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```sh
     # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    gatsby new wp-blog git@github.com:Camvillard/gatsby-wp-starter.git
     ```
 
 1.  **Start developing.**
@@ -28,7 +28,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-default-starter/
+    cd wp-blog/
     gatsby develop
     ```
 
@@ -47,6 +47,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     .
     ├── node_modules
     ├── src
+        ├── components
+        ├── images
+        ├── pages
+        ├── styles
+            ├── components
+            ├── layouts
+            ├── mixins
+            ├── variables
+            ├── main.scss
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js
