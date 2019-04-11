@@ -1,7 +1,11 @@
+// external stuff
 import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
-
 import { FaHeart } from "react-icons/fa";
+
+// internal stuff
+import "../styles/main.scss";
+
 
 
 export default () => (
