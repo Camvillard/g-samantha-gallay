@@ -1,23 +1,26 @@
 // external libraries
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 // internal data
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import SEO from "../components/Seo";
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import Navbar from "../components/navbar";
 import Logo from "../images/samanthagallay-logo_blanc.svg";
 
 import '../styles/main.scss';
 
 
 const IndexPage = ({data}) => {
+  const linksArray = ["à propos", "expertise", "honoraires", "contact", "nouvelles"]
   return (
-    <div id="homepage-content">
+    <div id="homepage-container">
       <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <Navbar links={linksArray}/>
       <div className="main-content">
         <Logo id="samanthagallay-logo"/>
-        <p dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
+        <p id="homepage-text" dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
       </div>
       <Footer />
     </div>
