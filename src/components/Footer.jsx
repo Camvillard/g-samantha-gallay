@@ -1,46 +1,32 @@
 import React from 'react';
+import { StaticQuery, graphql } from "gatsby"
 
 import { FaHeart } from "react-icons/fa";
 
 
-const Footer = () => {
-  return(
-    <div>
-     © {new Date().getFullYear()}, built with
-     <FaHeart />
-     {` `}
-     <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </div>
-  )
-}
-
-export default Footer;
-
-
-
-// export const query = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//   }
-// `
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query FooterQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <footer>
+        <p>© {new Date().getFullYear()} {data.site.siteMetadata.title} <br/>
+          fabriqué avec <FaHeart /> par
+          <a href="https://www.cdltbisou.com"> <strong>cdlt</strong>bisou</a>
+        </p>
+      </footer>
+    )}
+  />
+)
 
 
 
-  // <StaticQuery
-  //   query={graphql`
-  //     query {
-  //       placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-  //         childImageSharp {
-  //           fluid(maxWidth: 300) {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `}
-  //   render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  // />
+
+

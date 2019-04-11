@@ -2,7 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `starter wp`,
+    title: `cdltbisou`,
     description: `starter for gatsby + wp`,
     author: `cdltbisou`,
   },
