@@ -17,9 +17,10 @@ module.exports = {
     },
     // sass styles
     `gatsby-plugin-sass`,
+    // wordpress plugin
     {
-     resolve: `gatsby-source-wordpress`,
-     options: {
+      resolve: `gatsby-source-wordpress`,
+      options: {
        baseUrl: process.env.WORDPRESS_BASE_URL,
        protocol: process.env.WORDPRESS_PROTOCOL,
        hostingWPCOM: (process.env.WORDPRESS_HOSTING_WPCOM === 'true'),
@@ -36,7 +37,7 @@ module.exports = {
          "**/pages",
          "**/tags",
        ],
-     },
+      },
      },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -52,8 +53,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/ // See below to configure properly
+        }
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
