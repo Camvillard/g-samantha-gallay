@@ -29,7 +29,7 @@ class Navbar extends React.Component {
 
   render() {
     if (window.innerWidth > 992) {
-      return <DesktopMenu />
+      return <DesktopMenu  />
     }
     return <MobileMenu />
   }

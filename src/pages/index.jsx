@@ -13,11 +13,10 @@ import '../styles/main.scss';
 
 
 const IndexPage = ({data}) => {
-  const linksArray = ["à propos", "expertise", "honoraires", "contact", "nouvelles"]
   return (
     <div id="homepage-container">
       <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <Navbar links={linksArray}/>
+      <Navbar />
       <div className="main-content">
         <Logo id="samanthagallay-logo"/>
         <p id="homepage-text" dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
