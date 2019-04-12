@@ -2,9 +2,9 @@
 
 
 ul#main-menu {
-  width: 100vw;
-  display: flex;
-  justify-content:  flex-end;
+  // width: 100vw;
+  // display: flex;
+  // justify-content:  flex-end;
   list-style-type: none;
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -21,3 +21,43 @@ ul#main-menu {
     font-style: italic;
   }
 }
+
+#main-menu.mobile-menu {
+  max-width: 100vw;
+}
+
+
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  ul#main-menu {
+    width: 100vw;
+    display: flex;
+    justify-content:  flex-end;
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-inline-start: 0px;
+    li {
+      display: inline-block;
+      margin-right: 2vw;
+      margin-left: 2vw;
+      text-transform: uppercase;
+    }
+    li:last-child {
+      font-family: $accent-font;
+      text-transform: none;
+      font-style: italic;
+    }
+  }
+} // end of md-screen - 992px
+
+@media only screend and (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

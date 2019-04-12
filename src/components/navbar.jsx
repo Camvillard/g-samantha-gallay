@@ -1,6 +1,7 @@
 // external libraries
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
+import { FaBars } from 'react-icons/fa';
 
 // internal data
 // import Logo from "../images/samanthagallay-logo_blanc.svg";
@@ -9,17 +10,33 @@ import '../styles/main.scss';
 
 const visibleLinks = ["à propos", "expertise", "honoraires", "contact", "nouvelles"];
 let navbarLinks = [];
+let lastItem = [];
+let orderedLinks;
 
+// function that creates the list elements for menus
+// const creatingMenuList = (props) => {
+//   console.log(props)
+//   props.data.map( link => {
+//     return <li key={link.node.id}><a href={`${link.node.slug}`}>{link.node.title}</a></li>
+//   })
+// }
+
+// creating the component for mobile menus
 const MobileMenu = (props) => {
   return(
-    <ul id="main-menu" className="mobile-menu" >
-      <li>hamburger menu here</li>
-    </ul>
+    <div>
+      <div id="toggle-menu"><FaBars /></div>
+      <ul id="main-menu" className="mobile-menu">
+        {props.data.map( link => {
+          return <li key={link.node.id}><a href={`${link.node.slug}`}>{link.node.title}</a></li>
+        })}
+      </ul>
+    </div>
   )
 }
 
+// creating the component for desktop menus
 const DesktopMenu = (props) => {
-  // console.log("prout",props)
   return(
     <ul id="main-menu" className="desktop-menu">
     { props.data.map( link => {
@@ -33,39 +50,32 @@ const DesktopMenu = (props) => {
 class Navbar extends React.Component {
 
   checkNavbarLink(link) {
-    if (visibleLinks.includes(link.node.title)) {
+    if (visibleLinks.includes(link.node.title) && link.node.title !== "nouvelles") {
       navbarLinks.push(link)
-      console.log("this is the final navbar links array", navbarLinks)
-    }
+    } else if (link.node.title === "nouvelles") {
+      lastItem.push(link)
+    } else return
   }
 
   componentWillMount() {
-    console.log("mounting the component", navbarLinks)
+    // console.log("mounting the component", navbarLinks)
     const data = this.props.data.allWordpressPage.edges
     data.map( edge => {
-      this.checkNavbarLink(edge)
-      }
-    )
+       return this.checkNavbarLink(edge)
+      })
+    orderedLinks = navbarLinks.concat(lastItem)
+    return orderedLinks
   }
 
-  // buildNavbarLink(links) {
-  //   links.map( link => {
-  //     return <li key={link.node.id}><a href={`${link.node.slug}`}>{link.node.title}</a></li>
-  //   })
-  // }
-
   render() {
-    console.log("rendering", navbarLinks)
+    // console.log("rendering", orderedLinks)
     if (window.innerWidth > 992) {
-      return <DesktopMenu data={navbarLinks}/>
+      return <DesktopMenu data={orderedLinks}/>
     }
-    return <MobileMenu data={this.props.data}/>
+    return <MobileMenu data={orderedLinks}/>
   }
 
 }
-
-// export default Navbar;
-
 
 export default (props) => {
   return (<StaticQuery
