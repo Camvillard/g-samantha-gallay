@@ -36,6 +36,7 @@ module.exports = {
          "**/posts",
          "**/pages",
          "**/tags",
+         "**/menus",
        ],
       },
      },
