@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa';
 
 // internal data
 // import Logo from "../images/samanthagallay-logo_blanc.svg";
+import { toggleMenu } from "../utilities/navbar";
 
 import '../styles/main.scss';
 
@@ -13,20 +14,13 @@ let navbarLinks = [];
 let lastItem = [];
 let orderedLinks;
 
-// function that creates the list elements for menus
-// const creatingMenuList = (props) => {
-//   console.log(props)
-//   props.data.map( link => {
-//     return <li key={link.node.id}><a href={`${link.node.slug}`}>{link.node.title}</a></li>
-//   })
-// }
 
 // creating the component for mobile menus
 const MobileMenu = (props) => {
   return(
     <div>
       <div id="toggle-menu"><FaBars /></div>
-      <ul id="main-menu" className="mobile-menu">
+      <ul id="main-menu" className="mobile-menu hidden">
         {props.data.map( link => {
           return <li key={link.node.id}><a href={`${link.node.slug}`}>{link.node.title}</a></li>
         })}
@@ -65,6 +59,10 @@ class Navbar extends React.Component {
       })
     orderedLinks = navbarLinks.concat(lastItem)
     return orderedLinks
+  }
+
+  componentDidMount() {
+    toggleMenu();
   }
 
   render() {
