@@ -1,23 +1,27 @@
+// external libraries
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
-import Header from "../components/Header";
-// import Image from "../components/Image";
-import SEO from "../components/Seo";
-import Footer from '../components/Footer'
+// internal data
+// import Header from "../components/Header";
+import SEO from "../components/seo";
+import Footer from '../components/footer';
+import Navbar from "../components/navbar";
+import Logo from "../images/samanthagallay-logo_blanc.svg";
 
-
+// style
 import '../styles/main.scss';
 
 
 const IndexPage = ({data}) => {
   return (
-    <div>
+    <div id="homepage-container">
       <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <Header siteTitle={data.site.siteMetadata.title} path="homepage" />
-      <Link to="/contact">contact</Link>
-      <h1>todo prout</h1>
-      <a href="/contact">test</a>
+      <Navbar />
+      <div className="main-content">
+        <Logo id="samanthagallay-logo"/>
+        <p id="homepage-text" dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
+      </div>
       <Footer />
     </div>
   )
@@ -25,11 +29,10 @@ const IndexPage = ({data}) => {
 
 
 export const query = graphql`
-query homePage {
-  site {
-    siteMetadata {
-      title
-    }
+{
+  wordpressPage (slug: {eq: "accueil"}) {
+    slug
+    content
   }
 }
 `

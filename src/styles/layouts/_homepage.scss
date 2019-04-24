@@ -1,1 +1,43 @@
 /*----- LAYOUTS: HOMEPAGE ----- */
+
+
+body#homepage {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+}
+
+#homepage-container {
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+  #homepage-container {
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #samanthagallay-logo {
+      flex: 0 0 40%;
+    }
+  }
+} // end of md-screen - 992px
+
+@media only screend and (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

@@ -2,10 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./Header"
-import Footer from "./Footer"
+// internal data
+import Header from "./header"
+import Footer from "./footer"
 
+// svg files
+
+// style
 import "../styles/main.scss"
+
 
 const Layout = ({ children }) => (
   <StaticQuery

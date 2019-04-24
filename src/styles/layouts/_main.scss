@@ -1,6 +1,52 @@
 /*----- LAYOUTS : MAIN ----- */
 
+// general stuff
+html {
+  font: 112.5%/1.45em georgia, serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+
+
+// styles for website
 a {
   text-decoration: none;
   color: $primary-color;
 }
+
+
+.main-content {
+  width: 80vw;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media only screend and (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px
