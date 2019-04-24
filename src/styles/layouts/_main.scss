@@ -2,9 +2,10 @@
 
 // general stuff
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font-size: 62.5%;
   box-sizing: border-box;
   overflow-y: scroll;
+  line-height: 1.4;
 }
 
 * {
@@ -24,7 +25,6 @@ a {
   color: $primary-color;
 }
 
-
 .main-content {
   width: 80vw;
   margin: auto;
@@ -33,6 +33,12 @@ a {
 
 .hidden {
   display: none;
+}
+
+// lists
+
+.inline-list {
+  display: inline-block;
 }
 
 

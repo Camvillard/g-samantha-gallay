@@ -4,12 +4,39 @@ footer {
   a {
     color: white;
   }
+
+  ul {
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+  }
+  .footer-meta li:first-child a {
+    margin-right: 10px;
+  }
+
+  li:last-child {
+    margin-left: 10px;
+  }
 }
 
-footer.desktop-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
+footer.mobile-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .footer-infos {
+    margin-bottom: 20px;
+  }
+
+  .footer-infos:after {
+    margin-top: 15px;
+    content: ' ';
+    display: block;
+    background: white;
+    height: 1px;
+    width: 100%;
+  }
 }
 
 
@@ -20,6 +47,32 @@ footer.desktop-footer {
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+  footer.desktop-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-meta p,
+    .footer-meta a{
+      text-align: right;
+      font-size: 1.4rem;
+    }
+
+    .footer-meta li a {
+      font-size: 1.4rem;
+      // margin-right: 10px;
+    }
+
+
+    svg {
+      height: 1rem;
+    }
+  }
 } // end of md-screen - 992px
 
 @media only screend and (min-width: $lg-screen) {
