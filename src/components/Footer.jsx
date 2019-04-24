@@ -1,8 +1,11 @@
-// external stuff
+// external librairies
 import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
 import { FaHeart } from "react-icons/fa";
 
+// internal data
+// svg files
+// style
 
 class Footer extends React.Component {
 

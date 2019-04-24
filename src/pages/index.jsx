@@ -4,11 +4,12 @@ import { graphql } from "gatsby";
 
 // internal data
 // import Header from "../components/Header";
-import SEO from "../components/Seo";
-import Footer from '../components/Footer';
+import SEO from "../components/seo";
+import Footer from '../components/footer';
 import Navbar from "../components/navbar";
 import Logo from "../images/samanthagallay-logo_blanc.svg";
 
+// style
 import '../styles/main.scss';
 
 

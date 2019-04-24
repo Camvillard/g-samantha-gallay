@@ -1,9 +1,16 @@
+// external librairies
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
+// internal data
+
+
+// svg files
 import Logo from "../images/samanthagallay-logo_blanc.svg";
 
+
+// style
 import "../styles/components/_logo.scss"
 
 const Header = ({siteTitle, path}) => {

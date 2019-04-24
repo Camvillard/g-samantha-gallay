@@ -1,24 +1,44 @@
 /*----- COMPONENTS : NAVBAR ----- */
 
 
-ul#main-menu {
-  // width: 100vw;
-  // display: flex;
-  // justify-content:  flex-end;
+ul#main-menu.mobile-menu {
+  box-sizing: border-box;
+  position: fixed;
+  top: 52px;
   list-style-type: none;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  padding-inline-start: 0px;
+  padding-inline-start: 10px;
+  padding-bottom: 20px;
+  background: white;
+  width: 100vw;
   li {
-    display: inline-block;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    display: block;
+    padding: 6px;
     text-transform: uppercase;
   }
   li:last-child {
     font-family: $accent-font;
     text-transform: none;
     font-style: italic;
+  }
+}
+
+// mobile menu
+
+#toggle-menu {
+  box-sizing: border-box;
+  // border: 2px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  font-size: 2rem;
+  padding: 10px 0 0px 10px;
+  // height: 34px;
+  svg {
+    color: $primary-color;
   }
 }
 
