@@ -13,14 +13,25 @@ class Footer extends React.Component {
     const data = this.props.data;
     return(
       <footer className={ window.innerWidth > 992 ? "desktop-footer" : "mobile-footer"}>
+      <p className="footer-infos accent-text text-italic">
+        Samantha Gallay  <br/> 78, avenue Carnot  <br/> 33200 BORDEAUX
+      </p>
+      <div className="footer-meta">
+        <ul>
+          <li className="inline-list"><a href="#">politique de confidentialité</a></li>
+          ●
+          <li className="inline-list"><a href="#">mentions légales</a></li>
+        </ul>
         <p>© {new Date().getFullYear()} {data.site.siteMetadata.title} <br/>
           fabriqué avec <FaHeart /> par
           <a href="https://www.cdltbisou.com"> <strong>cdlt</strong>bisou</a>
         </p>
-      </footer>
+        </div>
+       </footer>
     )
   }
 }
+
 
 export default () => (
   <StaticQuery
