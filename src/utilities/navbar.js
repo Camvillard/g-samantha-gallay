@@ -12,9 +12,6 @@ function toggleMenu() {
 
   // event listeners
   menuButton.addEventListener('click', open)
-
-
-  console.log(menuButton);
 };
 
 export { toggleMenu };
