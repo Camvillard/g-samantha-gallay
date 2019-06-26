@@ -65,6 +65,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/page.jsx`),
           context: {
             id: edge.node.id,
+            slug: edge.node.slug
           },
         })
       })

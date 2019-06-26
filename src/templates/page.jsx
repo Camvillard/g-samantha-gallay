@@ -12,7 +12,7 @@ import "../styles/main.scss"
 export default ({ data }) => {
   const page = data.wordpressPage
   return (
-    <Layout>
+    <Layout slug={page.slug}>
       <SEO id={page.title} title={page.title} keywords={[`gatsby`, `application`, `react`]} />
       <div>
         <h1 dangerouslySetInnerHTML= {{ __html: page.title}} />
@@ -27,5 +27,6 @@ export const pageQuery = graphql`
     wordpressPage(id: { eq: $id }) {
       title
       content
+      slug
     }
   }`

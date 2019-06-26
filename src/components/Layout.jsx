@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 // internal data
 import Header from "./header"
 import Footer from "./footer"
+import Navbar from './navbar'
 
 // svg files
 
@@ -12,7 +13,7 @@ import Footer from "./footer"
 import "../styles/main.scss"
 
 
-const Layout = ({ children }) => (
+const Layout = ({ children, props }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,9 +25,9 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <div id="layout-container">
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
+        <div id="layout-content">
           <main>{children}</main>
           <Footer />
         </div>
