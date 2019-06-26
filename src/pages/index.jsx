@@ -122,6 +122,34 @@ const IndexPage = ({data}) => {
         </div>
         {/* end of #honoraires */}
 
+        <div id="contact">
+
+        <h3 className="section-title">Contact</h3>
+        <p className="tagline">
+        pour tout renseignement complèmentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
+        </p>
+
+        <p className="addresse">
+          <li>Samantha Gallay </li>
+          <li>78, av Carnot </li>
+          <li>33200 Bordeaux</li>
+        </p>
+
+        <form action="">
+
+          <input type="text" placeholder="nom :"/>
+          <input type="email" placeholder="adresse mail :"/>
+          <input type="text" placeholder="objet :"/>
+          <textarea rows="8" placeholder="message"></textarea>
+          <button><span>envoyer</span></button>
+
+        </form>
+
+
+
+        </div>
+        {/* end of #contact */}
+
 
 
 
