@@ -15,9 +15,17 @@
     text-align: center;
   }
 
+  .homepage-section {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+  }
+
 }
 
 #expertise {
+  flex-direction: column;
+  justify-content: center;
 
   .expertise-field {
     background: $light-gray;
@@ -41,6 +49,7 @@
 }
 
 #honoraires {
+  flex-direction: column;
   h6 {
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -56,26 +65,33 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  #homepage {
+  #presentation {
+    display: flex;
+    p {
+      flex: 0 0 65%;
+    }
+  }
+  #samanthagallay-logo {
+    flex: 0 0 25%;
+  }
 
-    .main-content {
+  .expertises-container {
+    display: flex;
+    // flex-direction: column;
+  }
+
+  #honoraires {
+    .honoraire-content {
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      justify-content: space-between;
     }
 
-    #logo {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      background: $primary-color;
-      flex: 0 0 350px;
-      height: 350px;
-      margin-right: 5%;
+    .column {
+      flex: 0 0 auto;
     }
 
-    #homepage-text {
-      flex: 0 1 auto;
+    .three-columns {
+      width: 30%;
     }
   }
 } // end of md-screen - 992px

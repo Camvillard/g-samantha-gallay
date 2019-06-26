@@ -65,8 +65,11 @@
   .desktop-menu {
     position: fixed;
     top: 0;
+    height: 60px;
+    border: 2px solid yellow;
     width: 100vw;
     display: flex;
+    background: white;
     justify-content: flex-end;
     list-style-type: none;
     margin-block-start: 0em;
