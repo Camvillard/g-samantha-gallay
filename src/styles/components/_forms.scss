@@ -1,10 +1,11 @@
 /*----- COMPONENTS : FORMS ----- */
 
 
-form.form-stroked {
+.form-stroked {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   input, textarea {
     font-family: $body-font;
@@ -43,7 +44,7 @@ form.form-stroked {
 
 }
 
-form.form-stroked-aqua {
+.form-stroked-aqua {
   input, textarea {
     border-bottom: 1px solid $bright-aqua;
     color: $bright-blue;
@@ -64,7 +65,7 @@ form.form-stroked-aqua {
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  form.form-stroked {
+  .form-stroked {
 
     button {
       width: 40%;

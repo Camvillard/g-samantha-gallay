@@ -36,6 +36,10 @@
       padding-top: 142px;
       min-height: calc(100vh - 142px);
     }
+
+    .section-title {
+      font-size: 2.6rem;
+    }
   }
 } // end of md-screen - 992px
 // end of general stuff for homepage
@@ -122,10 +126,13 @@
     padding: 24px 0;
     margin: 0 auto;
   }
+  .expertises-container  {
+    width: 100%;
+  }
 
   .expertise-field {
     background: white;
-    border: 2px solid $bright-aqua;
+    border: 1px solid $bright-aqua;
     padding: 16px;
     margin: 24px auto;
   }
@@ -226,14 +233,13 @@
 
   .tagline {
     text-align: center;
+    font-size: 2.2rem;
   }
 
   .adresse {
+    font-size: 2.2rem;
     list-style: none;
     padding: 0;
-  }
-
-  .adresse li {
     font-family: $accent-font;
     font-style: italic;
     text-align: center;
@@ -243,6 +249,7 @@
   .white-column {
     background: white;
     padding: 16px;
+    border: 1px solid $bright-aqua;
   }
 }
 
@@ -264,15 +271,27 @@
       margin: 0;
     }
 
+    .columns {
+      margin-bottom: 34px;
+    }
+
     .two-columns:first-child {
-      flex: 0 0 32%;
+      flex: 0 0 25%;
     }
 
     .two-columns:last-child {
-      flex: 0 0 60%;
+      flex: 1 0 60%;
+      margin-left: 24px;
     }
 
+    .tagline, .adresse {
+      text-align: left;
+    }
 
+    .form-stroked-aqua input{
+      margin: 2vh auto;
+
+    }
 
   }
 

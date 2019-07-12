@@ -182,11 +182,11 @@ const IndexPage = ({data}) => {
               Pour tout renseignement complèmentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
               </p>
 
-              <ul className="adresse">
-                <li>Samantha Gallay </li>
-                <li>101 cours d'Albret </li>
-                <li>33000 Bordeaux</li>
-              </ul>
+              <p className="adresse">
+                Samantha Gallay  <br/>
+                101 cours d'Albret  <br/>
+                33000 Bordeaux
+              </p>
 
             </div>
             {/* end of .two-columns */}
