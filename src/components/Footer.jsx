@@ -23,7 +23,7 @@ class Footer extends React.Component {
           <li className="inline-list"><a href="#">mentions légales</a></li>
         </ul>
         <p>© {new Date().getFullYear()} {data.site.siteMetadata.title} <br/>
-          fabriqué avec <FaHeart /> par
+          direction artistique & développement web par
           <a href="https://www.cdltbisou.com"> <strong>cdlt</strong>bisou</a>
         </p>
         </div>

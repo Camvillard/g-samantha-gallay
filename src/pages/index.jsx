@@ -8,6 +8,7 @@ import SEO from "../components/seo";
 import Footer from '../components/footer';
 import Navbar from "../components/navbar";
 import Logo from "../images/samanthagallay-logo_blanc.svg";
+import LogoBlanc from "../components/logo-blanc";
 
 // style
 import '../styles/main.scss';
@@ -18,22 +19,60 @@ const IndexPage = ({data}) => {
     <div id="homepage">
       <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Navbar />
-      <div className="main-content">
+
+      <div className="container">
+
+        <div id="homepage-banner">
+
+          <img src="https://contenu.gallay-avocat.fr/wp-content/uploads/2019/07/logo_blanc-full.png" alt="logo samantha gallay"/>
+          <p className="banner-adresse">
+            101 cours d'Albret  <br/>
+            33000 BORDEAUX
+          </p>
+
+          <p className="banner-contact">
+            Tel : 05.56.01.18.00  <br/>
+            Fax : 05.56.01.18.95
+          </p>
+
+        </div>
+        {/* end of #homepage-banner */}
+
 
         <div id="presentation" className="homepage-section">
-          <Logo id="samanthagallay-logo"/>
-          <p id="homepage-text" dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
+
+          <h3 className="section-title"><span>à propos</span></h3>
+
+          <div className="presentation-content">
+
+            <div className="left-column">
+              <img src="https://contenu.gallay-avocat.fr/wp-content/uploads/2019/04/Sam_3_nb.jpg" alt="samantha gallay avocat"/>
+            </div>
+
+            <div className="right-column">
+              <h1><span>Samantha Gallay</span></h1>
+              <p dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
+            </div>
+
+          </div>
+
         </div>
+        {/* end of #homepage-banner */}
+      </div>
 
-        <div id="expertise" className="homepage-section">
+      {/* end of .container */}
 
-          <h3 className="section-title">domaines d'intervention</h3>
+      <div id="expertise" className="homepage-section">
+
+        <div className="container">
+
+          <h3 className="section-title"><span>Domaines d'intervention</span></h3>
 
           <div className="expertises-container">
 
             <div className="expertise-field">
 
-              <h4>droit de la famille,  des personnes et de leur patrimoine</h4>
+              <h3>droit de la famille,  des personnes et de leur patrimoine</h3>
               <ul>
                 <li>Mariage, Pacs, concubinage</li>
                 <li>Etat civil, changement de nom et prénom, adoption</li>
@@ -48,7 +87,7 @@ const IndexPage = ({data}) => {
             </div>
 
             <div className="expertise-field">
-              <h4>droit des mineurs</h4>
+              <h3>droit des mineurs</h3>
               <ul>
                 <li>Assistance éducative</li>
                 <li>Volet pénal (gardes à vue, procédures pénales)</li>
@@ -56,13 +95,17 @@ const IndexPage = ({data}) => {
             </div>
           </div>
 
-
         </div>
-        {/* end of #expertise */}
+        {/* end of .container */}
+
+      </div>
+      {/* end of #expertise */}
+
+      <div className="container">
 
         <div id="honoraires" className="homepage-section">
 
-          <h3 className="section-title">honoraires</h3>
+          <h3 className="section-title"><span>Honoraires</span></h3>
           <p className="tagline">Extraits du Règlement intérieur national des avocats</p>
 
           <div className="honoraire-content">
@@ -125,18 +168,21 @@ const IndexPage = ({data}) => {
         </div>
         {/* end of #honoraires */}
 
+      </div>
+
+
         <div id="contact" className="homepage-section">
 
-        <h3 className="section-title">Contact</h3>
+        <h3 className="section-title"><span>Contact</span></h3>
         <p className="tagline">
-        pour tout renseignement complèmentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
+        Pour tout renseignement complèmentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
         </p>
 
-        <p className="addresse">
+        <ul className="adresse">
           <li>Samantha Gallay </li>
           <li>78, av Carnot </li>
           <li>33200 Bordeaux</li>
-        </p>
+        </ul>
 
         <form action="">
 
@@ -154,10 +200,6 @@ const IndexPage = ({data}) => {
         {/* end of #contact */}
 
 
-
-
-
-      </div>
       <Footer />
     </div>
   )

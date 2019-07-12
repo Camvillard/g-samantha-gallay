@@ -22,12 +22,22 @@ body {
   margin: 0px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: lining-nums;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
 }
 
 
-.hidden {
-  display: none;
+img {
+  max-width: 100%;
+
 }
+
+
+// .hidden {
+//   display: none;
+// }
 
 // lists
 

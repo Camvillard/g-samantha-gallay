@@ -23,9 +23,9 @@ const MobileMenu = (props) => {
     <div id="navbar">
       <div id="toggle-menu"><FaBars /></div>
       <ul id="main-menu" className="mobile-menu hidden">
-        <li><Link to="/a-propos">à propos</Link></li>
-        <li><Link to="/expertise">expertise</Link></li>
-        <li><Link to="/honoraires">honoraires</Link></li>
+        <li><Link to="/#a-propos">à propos</Link></li>
+        <li><Link to="/#expertise">expertise</Link></li>
+        <li><Link to="/#honoraires">honoraires</Link></li>
         <li><Link to="/contact">contact</Link></li>
         <li><Link to="/nouvelles">nouvelles</Link></li>
       </ul>
@@ -36,13 +36,17 @@ const MobileMenu = (props) => {
 // creating the component for desktop menus
 const DesktopMenu = (props) => {
   return(
-    <ul id="main-menu" className="desktop-menu">
-      <li><Link to="/a-propos">à propos</Link></li>
-      <li><Link to="/expertise">expertise</Link></li>
-      <li><Link to="/honoraires">honoraires</Link></li>
-      <li><Link to="/contact">contact</Link></li>
-      <li><Link to="/nouvelles">nouvelles</Link></li>
-    </ul>
+    <div id="main-menu">
+    <img src="https://contenu.gallay-avocat.fr/wp-content/uploads/2019/07/logo_blanc.png" alt=""/>
+
+      <ul className="desktop-menu">
+        <li><Link to="/#a-propos">à propos</Link></li>
+        <li><Link to="/#expertise">expertise</Link></li>
+        <li><Link to="/#honoraires">honoraires</Link></li>
+        <li><Link to="/contact">contact</Link></li>
+        <li><Link to="/nouvelles">nouvelles</Link></li>
+      </ul>
+    </div>
   )
 }
 

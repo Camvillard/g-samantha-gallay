@@ -1,6 +1,7 @@
 /*----- LAYOUTS: HOMEPAGE ----- */
 
 
+// general stuff for homepage
 #homepage {
 
   .main-content {
@@ -10,34 +11,121 @@
     align-items: center;
   }
 
-  h3.section-title {
-    font-size: 2.2rem;
-    text-align: center;
+  .section-title {
+    font-size: 2rem;
+    text-align: left;
+    font-family: $body-font;
+    text-transform: uppercase;
+    margin-bottom: calc(0.8em + 4px)
+  }
+
+  .section-title span {
+    padding-bottom: 4px;
+    border-bottom: 2px solid $bright-blue;
   }
 
   .homepage-section {
-    min-height: calc(100vh - 60px);
-    display: flex;
-    align-items: center;
+    min-height: 100vh;
   }
 
 }
 
-#expertise {
+@media (min-width: $md-screen) {
+  #homepage {
+    .homepage-section {
+      padding-top: 142px;
+    }
+  }
+}
+
+
+#homepage-banner {
+  height: 100vh;
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 
-  .expertise-field {
-    background: $light-gray;
-    border-radius: 4px;
-    padding: 16px;
-    margin: 16px;
+  img {
+    width: 80%;
   }
-  .expertise-field h4 {
+
+  .banner-adresse {
+    font-size: 2rem;
+    color: $dark-blue;
+  }
+
+  .banner-contact {
+    color: $medium-gray;
+  }
+}
+
+@media (min-width: $md-screen) {
+  #homepage-banner {
+    img {
+      width: 40%;
+    }
+
+    .banner-adresse {
+      font-size: 2.4rem;
+    }
+
+    .banner-contact {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+
+#presentation {
+
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: $md-screen) {
+  #presentation {
+
+    .presentation-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      padding-left: 1vw;
+      flex: 0 1 40%;
+    }
+
+  }
+
+}
+
+
+#expertise {
+  background: $light-aqua;
+
+  .container {
+    padding: 24px 0;
+    margin: 0 auto;
+  }
+
+  .expertise-field {
+    background: white;
+    border: 2px solid $bright-aqua;
+    padding: 16px;
+    margin: 24px auto;
+  }
+  .expertise-field h3 {
+    font-size: 2rem;
     text-align: center;
     color: $bright-aqua;
-    font-weight: 500;
-    text-transform: uppercase;
     line-height: 1;
     margin: 1em auto;
   }
@@ -48,12 +136,52 @@
   }
 }
 
+@media (min-width: $md-screen) {
+
+
+  #expertise {
+      height: 100vh;
+
+    .container {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: calc(100vh - 142px);
+    }
+
+    .expertises-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .expertise-field {
+      margin: 0 20px;
+    }
+  }
+}
+
+
+
+
 #honoraires {
   flex-direction: column;
   h6 {
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 500;
+  }
+}
+
+#contact {
+  .adresse {
+    list-style: none;
+  }
+
+  .adresse li {
+    font-family: $accent-font;
+    font-style: italic;
+    text-align: center;
+    margin: 0px auto;
   }
 }
 
@@ -65,20 +193,20 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  #presentation {
-    display: flex;
-    p {
-      flex: 0 0 65%;
+
+
+  #expertise {
+    .expertises-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .expertise-field {
+      margin: 0 20px;
     }
   }
-  #samanthagallay-logo {
-    flex: 0 0 25%;
-  }
 
-  .expertises-container {
-    display: flex;
-    // flex-direction: column;
-  }
+
 
   #honoraires {
     .honoraire-content {
