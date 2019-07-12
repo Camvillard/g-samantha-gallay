@@ -110,7 +110,7 @@ const IndexPage = ({data}) => {
 
           <div className="honoraire-content">
 
-            <div className="column three-columns">
+            <div className="column two-columns">
 
               <h6>Article 11.1 Information du client</h6>
               <p className="accent-text">
@@ -122,15 +122,16 @@ const IndexPage = ({data}) => {
               « Sauf en cas d’urgence ou de force majeure ou lorsqu’il intervient au titre de l’aide juridictionnelle totale ou de la troisième partie de la loi n° 91-647 du 10 juillet 1991 relative à l’aide juridique, l’avocat conclut par écrit avec son client une convention d’honoraires, qui précise, notamment, le montant ou le mode de détermination des honoraires couvrant les diligences prévisibles, ainsi que les divers frais et débours envisagés. »
               </p>
 
-            </div>
-            {/* end of .column.three-column */}
-
-            <div className="column three-columns">
-
               <h6>Détermination des honoraires</h6>
               <p className="accent-text">
               Les honoraires sont fixés selon les usages, en fonction de la situation de fortune du client, de la difficulté de l’affaire, des frais exposés par l’avocat, de sa notoriété et des diligences de celui-ci. L’avocat chargé d’un dossier peut demander des honoraires à son client même si ce dossier lui est retiré avant sa conclusion, dans la mesure du travail accompli.
               </p>
+
+            </div>
+            {/* end of .column.two-column */}
+
+
+            <div className="column two-columns">
 
               <h6>Eléments de la rémunération</h6>
               <p className="accent-text">
@@ -144,11 +145,6 @@ const IndexPage = ({data}) => {
                 <li>les avantages et le résultat obtenus au profit du client par son travail, ainsi que le service rendu à celui-ci,</li>
                 <li>la situation de fortune du client.</li>
               </p>
-
-            </div>
-            {/* end of .column.three-column */}
-
-            <div className="column three-columns">
 
               <h6>Article 11.6 Provision sur frais et honoraires</h6>
               <p className="accent-text">
@@ -169,35 +165,56 @@ const IndexPage = ({data}) => {
         {/* end of #honoraires */}
 
       </div>
+      {/* end of .container */}
 
 
-        <div id="contact" className="homepage-section">
+      <div id="contact" className="homepage-section">
 
-        <h3 className="section-title"><span>Contact</span></h3>
-        <p className="tagline">
-        Pour tout renseignement complèmentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
-        </p>
+        <div className="container">
 
-        <ul className="adresse">
-          <li>Samantha Gallay </li>
-          <li>78, av Carnot </li>
-          <li>33200 Bordeaux</li>
-        </ul>
+          <h3 className="section-title"><span>Contact</span></h3>
 
-        <form action="">
+          <div className="columns">
 
-          <input type="text" placeholder="nom :"/>
-          <input type="email" placeholder="adresse mail :"/>
-          <input type="text" placeholder="objet :"/>
-          <textarea rows="8" placeholder="message"></textarea>
-          <button><span>envoyer</span></button>
+            <div className="two-columns">
 
-        </form>
+              <p className="tagline">
+              Pour tout renseignement complèmentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
+              </p>
 
+              <ul className="adresse">
+                <li>Samantha Gallay </li>
+                <li>101 cours d'Albret </li>
+                <li>33000 Bordeaux</li>
+              </ul>
+
+            </div>
+            {/* end of .two-columns */}
+
+            <div className="two-columns white-column">
+
+              <form action="" className="form-stroked form-stroked-aqua">
+
+                <input type="text" placeholder="nom :"/>
+                <input type="email" placeholder="adresse mail :"/>
+                <input type="text" placeholder="objet :"/>
+                <textarea rows="8" placeholder="message"></textarea>
+                <button className="btn-aqua"><span>envoyer</span></button>
+
+              </form>
+
+            </div>
+            {/* end of .two-columns */}
+
+          </div>
+          {/* end of .columns */}
 
 
         </div>
-        {/* end of #contact */}
+        {/* end of .container */}
+
+      </div>
+      {/* end of #contact */}
 
 
       <Footer />

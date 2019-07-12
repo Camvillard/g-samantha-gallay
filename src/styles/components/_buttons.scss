@@ -4,8 +4,12 @@
 @import "../variables/index";
 @import "../mixins/buttons";
 
-.button-blue {
-  @include button($primary-color, $primary-color, white);
+.btn-aqua {
+  @include button($bright-aqua, $bright-aqua, white);
+
+  &:hover {
+    @include button(white, $bright-aqua, $bright-aqua);
+  }
 }
 
 .button-white {

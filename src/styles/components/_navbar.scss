@@ -6,8 +6,10 @@
   left: -100vw;
   top: 0;
   width: 0px;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }
+
+
 
 
 .mobile-menu {
@@ -15,7 +17,7 @@
   position: fixed;
   z-index: 8000;
   top: 0px;
-  left: 80vw;
+  left: 0vw;
   height: 100vh;
   width: 80vw;
   display: flex;
@@ -26,7 +28,7 @@
   margin-block-start: 0em;
   margin-block-end: 0em;
   padding-inline-start: 0px;
-  background: white;
+  background: $bright-blue;
   transition: all 0.4s ease;
 
   li {
@@ -35,6 +37,10 @@
     // padding: 6px;
     margin-bottom: 10px;
     text-transform: uppercase;
+  }
+
+  a {
+    color: white;
   }
 
   li:last-child {
@@ -52,12 +58,17 @@
   left: 0;
   top: 0;
   z-index: 9000;
-  width: 100%;
-  background: white;
+  background: none;
   font-size: 2rem;
   padding: 10px 0 0px 10px;
+
   svg {
     color: $primary-color;
+  }
+
+  &.white-toggle svg{
+    color: white;
+
   }
 }
 

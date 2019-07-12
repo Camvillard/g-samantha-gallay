@@ -34,9 +34,11 @@
   #homepage {
     .homepage-section {
       padding-top: 142px;
+      min-height: calc(100vh - 142px);
     }
   }
-}
+} // end of md-screen - 992px
+// end of general stuff for homepage
 
 
 #homepage-banner {
@@ -60,6 +62,7 @@
   }
 }
 
+
 @media (min-width: $md-screen) {
   #homepage-banner {
     img {
@@ -74,8 +77,8 @@
       font-size: 2rem;
     }
   }
-}
-
+} // end of md-screen - 992px
+// end of homepage banner
 
 
 #presentation {
@@ -87,6 +90,10 @@
 
 @media (min-width: $md-screen) {
   #presentation {
+
+    .homepage-section{
+      // min-height
+    }
 
     .presentation-content {
       display: flex;
@@ -105,7 +112,7 @@
 
   }
 
-}
+} // end of md-screen - 992px
 
 
 #expertise {
@@ -138,7 +145,6 @@
 
 @media (min-width: $md-screen) {
 
-
   #expertise {
       height: 100vh;
 
@@ -146,25 +152,40 @@
       padding-top: 0;
       padding-bottom: 0;
       height: calc(100vh - 142px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .section-title {
+      margin-left: 0;
     }
 
     .expertises-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
+      margin-bottom: 24px;
     }
 
     .expertise-field {
-      margin: 0 20px;
+      flex: 0 0 48%;
+      padding: 24px;
     }
   }
-}
-
-
+} // end of md-screen - 992px
 
 
 #honoraires {
   flex-direction: column;
+
+  p.tagline {
+    font-family: $accent-font;
+    font-style: italic;
+    color: $bright-blue;
+  }
+
   h6 {
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -172,9 +193,44 @@
   }
 }
 
+@media (min-width: $md-screen) {
+
+  #honoraires {
+
+    .honoraire-content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .column {
+      flex: 0 0 auto;
+    }
+
+    .two-columns {
+      width: 48%;
+    }
+  }
+} // end of md-screen - 992px
+
+
+
+
 #contact {
+  background: $light-aqua;
+  height: 100vh;
+
+  .container {
+    padding: 24px 0;
+    margin: 0 auto;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
   .adresse {
     list-style: none;
+    padding: 0;
   }
 
   .adresse li {
@@ -183,7 +239,54 @@
     text-align: center;
     margin: 0px auto;
   }
+
+  .white-column {
+    background: white;
+    padding: 16px;
+  }
 }
+
+@media (min-width: $md-screen) {
+
+  #contact {
+
+    .container {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: calc(100vh - 142px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .section-title {
+      margin: 0;
+    }
+
+    .two-columns:first-child {
+      flex: 0 0 32%;
+    }
+
+    .two-columns:last-child {
+      flex: 0 0 60%;
+    }
+
+
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width: $xsm-screen) {
@@ -194,34 +297,6 @@
 
 @media (min-width: $md-screen) {
 
-
-  #expertise {
-    .expertises-container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .expertise-field {
-      margin: 0 20px;
-    }
-  }
-
-
-
-  #honoraires {
-    .honoraire-content {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .column {
-      flex: 0 0 auto;
-    }
-
-    .three-columns {
-      width: 30%;
-    }
-  }
 } // end of md-screen - 992px
 
 @media only screend and (min-width: $lg-screen) {

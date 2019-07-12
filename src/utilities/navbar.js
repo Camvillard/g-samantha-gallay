@@ -8,6 +8,7 @@ function toggleMenu() {
   // functions
   const open = () => {
     mobileNavigation.classList.toggle('hidden');
+    menuButton.classList.toggle('white-toggle')
   }
 
   // event listeners
