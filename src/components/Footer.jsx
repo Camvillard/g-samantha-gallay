@@ -12,20 +12,27 @@ class Footer extends React.Component {
   render() {
     const data = this.props.data;
     return(
-      <footer className={ window.innerWidth > 992 ? "desktop-footer" : "mobile-footer"}>
-      <p className="footer-infos accent-text text-italic">
-        Samantha Gallay  <br/> 78, avenue Carnot  <br/> 33200 BORDEAUX
-      </p>
-      <div className="footer-meta">
-        <ul>
-          <li className="inline-list"><a href="#">politique de confidentialité</a></li>
-          ●
-          <li className="inline-list"><a href="#">mentions légales</a></li>
-        </ul>
-        <p>© {new Date().getFullYear()} {data.site.siteMetadata.title} <br/>
-          direction artistique & développement web par
-          <a href="https://www.cdltbisou.com"> <strong>cdlt</strong>bisou</a>
+      <footer className="main-footer">
+
+        <p className="footer-infos accent-text text-italic">
+          Samantha Gallay  <br/>
+          101, Cours d'Albret <br/>
+          33000 BORDEAUX
         </p>
+        <div className="footer-meta">
+          <p className="copyrights">
+            © {new Date().getFullYear()} {data.site.siteMetadata.title}
+          </p>
+          <ul>
+            <li className="inline-list"><a href="#">politique de confidentialité</a></li>
+            ●
+            <li className="inline-list"><a href="#">mentions légales</a></li>
+          </ul>
+          <p className="web-credits">
+            direction artistique & développement web par
+            <a href="https://www.cdltbisou.com"> <strong>cdlt</strong>bisou</a>
+          </p>
+
         </div>
        </footer>
     )

@@ -2,9 +2,9 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: `cdltbisou`,
-    description: `starter for gatsby + wp`,
-    author: `cdltbisou`,
+    title: `Gallay Avocat`,
+    description: `Avocat à Bordeaux`,
+    author: `camille villard | cdltbisou`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

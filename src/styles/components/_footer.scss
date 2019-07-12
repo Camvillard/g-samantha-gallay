@@ -1,28 +1,8 @@
-footer {
+
+.main-footer {
   background: $primary-color;
   color: white;
-  a {
-    color: white;
-  }
-
-  p {
-    margin-top: 0;
-  }
-
-  ul {
-    margin-block-start: 0px;
-    padding-inline-start: 0px;
-  }
-  .footer-meta li:first-child a {
-    margin-right: 10px;
-  }
-
-  li:last-child {
-    margin-left: 10px;
-  }
-}
-
-footer.mobile-footer {
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,6 +11,7 @@ footer.mobile-footer {
 
   .footer-infos {
     margin-bottom: 20px;
+    font-size: 1.8rem;
   }
 
   .footer-infos:after {
@@ -40,6 +21,36 @@ footer.mobile-footer {
     background: white;
     height: 1px;
     width: 100%;
+  }
+
+  a {
+    color: white;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  ul, li {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .footer-meta a {
+    font-size: 1.4rem;
+  }
+
+  .footer-meta li:first-child a {
+    margin-right: 10px;
+  }
+
+  li:last-child {
+    margin-left: 10px;
+  }
+
+  .web-credits {
+    font-size: 1.4rem;
+    margin: 0;
   }
 }
 
