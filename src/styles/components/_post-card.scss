@@ -1,0 +1,55 @@
+/*----- COMPONENTS : POST CARD ----- */
+
+.post-card {
+  margin: 32px auto;
+  background: $light-gray;
+  padding: 8px;
+  position: relative;
+}
+
+.post-card-meta {
+  p {
+    margin: 0;
+    font-family: $accent-font;
+    font-style: italic;
+    color: $dark-blue;
+  }
+
+  a {
+    color: $dark-blue;
+  }
+}
+
+.post-card-content {
+  .post-card-title {
+    color: $dark-blue;
+  }
+
+  .post-card-excerpt {
+    margin-bottom: 32px;
+  }
+}
+
+.btn-read-more {
+  position: absolute;
+  height: 32px;
+  bottom: -16px;
+  right: 20px;
+}
+
+
+
+@media (min-width: $xsm-screen) {
+} // end of xsm-screen - 576px
+
+@media (min-width: $sm-screen) {
+} // end of sm-screen - 768px
+
+@media (min-width: $md-screen) {
+} // end of md-screen - 992px
+
+@media (min-width: $lg-screen) {
+} // end of lg-screen - 1200px
+
+@media (min-width: $hg-screen) {
+} // end of hg-screen - 1440px

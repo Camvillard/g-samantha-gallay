@@ -28,7 +28,7 @@ class PostCard extends React.Component {
 
         </div>
 
-        <div className="btn-block">
+        <div className="btn-block btn-read-more">
           <Link to={`/${post.slug}`} className="btn-aqua">lire la suite</Link>
         </div>
 

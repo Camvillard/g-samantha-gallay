@@ -307,6 +307,41 @@
 
 }
 
+// nouvelles
+
+#nouvelles {
+
+ .btn-read-articles {
+
+    width: 100%;
+    margin: 80px auto;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: $md-screen) {
+
+  #nouvelles {
+
+    .last-posts-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .post-card {
+      flex: 0 0 48%;
+      margin: 48px 0;
+    }
+
+
+
+  }
+
+} // end of md-screen - 992px
+
 
 
 

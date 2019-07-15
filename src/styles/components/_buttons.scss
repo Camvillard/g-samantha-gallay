@@ -12,8 +12,18 @@
   }
 }
 
-.button-white {
+.btn-white {
   @include button(white, $primary-color, $primary-color);
+}
+
+.btn-blue,
+a.btn-blue,
+button.btn-blue {
+  @include button($bright-blue, $bright-blue, white);
+
+  &:hover {
+    @include button(white, $bright-blue, $bright-blue);
+  }
 }
 
 

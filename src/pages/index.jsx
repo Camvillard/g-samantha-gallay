@@ -1,6 +1,6 @@
 // external libraries
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 // internal data
 // import Header from "../components/Header";
@@ -242,13 +242,18 @@ const IndexPage = ({data}) => {
 
       <div className="container">
 
-      <div id="nouvelles">
-        <h3 className="section-title">les derniers articles</h3>
+        <div id="nouvelles">
+          <h3 className="section-title"><span>les derniers articles</span></h3>
 
-        {posts.map( p => <PostCard post={p.node} key={p.node.id} />)}
+          <div className="last-posts-content">
+            {posts.map( p => <PostCard post={p.node} key={p.node.id} />)}
+          </div>
 
-      </div>
+          <div className="btn-block btn-read-articles">
+            <Link to="/nouvelles" className="btn-blue">lire tous les articles</Link>
+          </div>
 
+        </div>
 
       </div>
 
