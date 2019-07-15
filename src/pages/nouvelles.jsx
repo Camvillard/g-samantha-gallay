@@ -24,7 +24,7 @@ class Nouvelles extends React.Component {
 
           <div className="container">
 
-            <h3 className="page-title">le blog</h3>
+            <h2 className="page-title">le blog</h2>
             <p className="tagline">prochainement</p>
 
           </div>

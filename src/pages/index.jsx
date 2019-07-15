@@ -205,9 +205,9 @@ const IndexPage = ({data}) => {
               className="form-stroked form-stroked-aqua"
             >
                 <input hidden className="hidden" name="bot-field" />
-                <input type="text" name="nom" placeholder="nom :"/>
-                <input type="email" name="adresse mail" placeholder="adresse mail :"/>
-                <input type="text" name="objet du message" placeholder="objet :"/>
+                <input type="text" name="name" placeholder="nom :"/>
+                <input type="email" name="email" placeholder="adresse mail :"/>
+                <input type="text" name="subject" placeholder="objet :"/>
                 <textarea rows="8" name="message" placeholder="message"></textarea>
                 <div data-netlify-recaptcha />
                 <button className="btn-aqua" type="submit"><span>envoyer</span></button>
