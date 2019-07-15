@@ -11,6 +11,10 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               slug
+              categories {
+                name
+                id
+              }
               wordpress_id
               content
               title
@@ -53,6 +57,7 @@ exports.createPages = ({ graphql, actions }) => {
               id
               slug
               content
+              title
             }
           }
         }
