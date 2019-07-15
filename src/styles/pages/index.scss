@@ -1,9 +1,6 @@
-/*----- INDEX FOR LAYOUTS ----- */
+/*----- INDEX FOR PAGES ----- */
 
-@import "main";
-@import "homepage";
-@import "about";
-@import "articles";
+@import "contact";
 
 
 @media (min-width: $xsm-screen) {
@@ -13,6 +10,7 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+
 } // end of md-screen - 992px
 
 @media (min-width: $lg-screen) {

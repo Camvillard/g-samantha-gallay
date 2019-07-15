@@ -87,6 +87,8 @@
 
   #main-menu {
     position: fixed;
+    z-index: 8000;
+    left: 0;
     top: 0;
     height: 60px;
     width: 100vw;
