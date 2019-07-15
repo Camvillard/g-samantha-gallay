@@ -46,6 +46,12 @@ img {
   display: inline-block;
 }
 
+// general displaying
+
+main {
+  margin-top: 64px;
+}
+
 
 @media (min-width: $xsm-screen) {
 } // end of xsm-screen - 576px
@@ -54,9 +60,12 @@ img {
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
+  main {
+    margin-top: 132px;
+  }
 } // end of md-screen - 992px
 
-@media only screend and (min-width: $lg-screen) {
+@media (min-width: $lg-screen) {
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

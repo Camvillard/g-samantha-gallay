@@ -19,7 +19,7 @@ const IndexPage = ({data}) => {
   const posts = data.allWordpressPost.edges
   return (
     <div id="homepage">
-      <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Accueil" keywords={[`Samantha Gallay`, `avocat`, `Bordeaux`, `droit de la famille`, `droit des personnes`, `droit des mineurs`]} />
       <Navbar />
 
       <div className="container">
@@ -213,19 +213,6 @@ const IndexPage = ({data}) => {
                 <button className="btn-aqua" type="submit"><span>envoyer</span></button>
 
             </form>
-
-            test
-
-              <form action="https://formspree.io/ca.villard@gmail.com" method="POST" className="form-stroked form-stroked-aqua">
-
-                <input type="hidden" name="_next" value="https://www.gallay-avocat.fr"/>
-                <input type="text" name="nom" placeholder="nom :"/>
-                <input type="email" name="adresse mail" placeholder="adresse mail :"/>
-                <input type="text" name="objet du message" placeholder="objet :"/>
-                <textarea rows="8" name="message" placeholder="message"></textarea>
-                <button className="btn-aqua" type="submit"><span>envoyer</span></button>
-
-              </form>
 
             </div>
             {/* end of .two-columns */}

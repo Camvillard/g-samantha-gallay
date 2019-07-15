@@ -1,9 +1,17 @@
-/*----- COMPONENTS : CONTAINERS ----- */
+/*----- INDEX FOR LAYOUTS ----- */
 
-.container {
-  width: 88vw;
-  max-width: 1200px;
-  margin: 60px auto 32px;
+#page-articles.main-content {
+  min-height: calc(100vh - 264px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .container,
+  h3 {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: $xsm-screen) {
@@ -14,8 +22,8 @@
 
 @media (min-width: $md-screen) {
 
-  .container {
-    width: calc(90vw - 280px);
+  #page-articles.main-content {
+    min-height: calc(100vh - 232px);
   }
 
 } // end of md-screen - 992px

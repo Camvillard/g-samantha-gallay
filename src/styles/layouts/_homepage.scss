@@ -362,7 +362,7 @@
 
 } // end of md-screen - 992px
 
-@media only screend and (min-width: $lg-screen) {
+@media (min-width: $lg-screen) {
 } // end of lg-screen - 1200px
 
 @media (min-width: $hg-screen) {

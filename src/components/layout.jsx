@@ -25,13 +25,13 @@ const Layout = ({ children, props }) => (
       }
     `}
     render={data => (
-      <div id="layout-container">
+      <React.Fragment>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div id="layout-content">
+        <div className="layout-container">
           <main>{children}</main>
           <Footer />
         </div>
-      </div>
+      </React.Fragment>
     )}
   />
 )
