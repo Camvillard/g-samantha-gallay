@@ -11,11 +11,13 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               slug
+              wordpress_id
             }
           }
         }
       }
     `)
+    // we need the wordpress_id to match the categories after
 
     query.then(result => {
       if (result.errors) {
@@ -31,6 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/post.jsx`),
           context: {
             id: edge.node.id,
+            postId: edge.node.wordpress_id
           },
         })
       })
@@ -74,7 +77,44 @@ exports.createPages = ({ graphql, actions }) => {
     }) // query.then
   }) // createWpPages
 
-  return Promise.all([createWpPosts, createWpPages])
+  const createWpCategories = new Promise((resolve, reject) => {
+    const query = graphql(`
+      {
+        allWordpressCategory {
+          edges {
+            node {
+              id
+              slug
+              name
+            }
+          }
+        }
+      }
+    `)
+
+    query.then(result => {
+      if (result.errors) {
+        console.error(result.errors)
+        reject(result.errors)
+      }
+
+      const catEdges = result.data.allWordpressCategory.edges
+      catEdges.forEach(edge => {
+        createPage({
+          path: `/categorie/${edge.node.slug}`,
+          component: path.resolve(`./src/templates/category.jsx`),
+          context: {
+            id: edge.node.id,
+            slug: edge.node.slug
+          },
+        })
+      })
+
+      resolve()
+    }) // query.then
+  }) // createWpPages
+
+  return Promise.all([createWpPosts, createWpPages, createWpCategories])
 } // createPages
 
 

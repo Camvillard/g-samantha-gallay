@@ -11,10 +11,10 @@ import { toggleMenu } from "../utilities/navbar";
 
 // style
 
-const visibleLinks = ["à propos", "expertise", "honoraires", "contact", "nouvelles"];
-let navbarLinks = [];
-let lastItem = [];
-let orderedLinks;
+// const visibleLinks = ["à propos", "expertise", "honoraires", "contact", "nouvelles"];
+// let navbarLinks = [];
+// let lastItem = [];
+// let orderedLinks;
 
 
 // creating the component for mobile menus
@@ -37,7 +37,7 @@ const MobileMenu = (props) => {
 const DesktopMenu = (props) => {
   return(
     <div id="main-menu">
-    <img src="https://contenu.gallay-avocat.fr/wp-content/uploads/2019/07/logo_blanc.png" alt=""/>
+    <Link to="/"><img src="https://contenu.gallay-avocat.fr/wp-content/uploads/2019/07/logo_blanc.png" alt=""/></Link>
 
       <ul className="desktop-menu">
         <li><Link to="/#presentation">à propos</Link></li>
@@ -63,9 +63,9 @@ class Navbar extends React.Component {
   render() {
     // choose wich component to render depending on the size of the screen
     if (window.innerWidth > 992) {
-      return <DesktopMenu data={orderedLinks}/>
+      return <DesktopMenu />
     }
-    return <MobileMenu data={orderedLinks}/>
+    return <MobileMenu />
   }
 
 }

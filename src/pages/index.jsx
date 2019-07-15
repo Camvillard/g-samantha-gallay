@@ -7,6 +7,7 @@ import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import Footer from '../components/footer';
 import Navbar from "../components/navbar";
+import PostCard from "../components/post-card";
 // import Logo from "../images/samanthagallay-logo_blanc.svg";
 // import LogoBlanc from "../components/logo-blanc";
 
@@ -15,6 +16,7 @@ import '../styles/main.scss';
 
 
 const IndexPage = ({data}) => {
+  const posts = data.allWordpressPost.edges
   return (
     <div id="homepage">
       <SEO id="homepage" title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -179,7 +181,7 @@ const IndexPage = ({data}) => {
             <div className="two-columns">
 
               <p className="tagline">
-              Pour tout renseignement complèmentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
+              Pour tout renseignement complémentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
               </p>
 
               <p className="adresse">
@@ -197,7 +199,7 @@ const IndexPage = ({data}) => {
             <form
               name="contact-form"
               method="post"
-              action="/thanks"
+              action="/merci"
               data-netlify="true"
               netlify-honeypot="bot-field"
               className="form-stroked form-stroked-aqua"
@@ -238,6 +240,18 @@ const IndexPage = ({data}) => {
       </div>
       {/* end of #contact */}
 
+      <div className="container">
+
+      <div id="nouvelles">
+        <h3 className="section-title">les derniers articles</h3>
+
+        {posts.map( p => <PostCard post={p.node} key={p.node.id} />)}
+
+      </div>
+
+
+      </div>
+
 
       <Footer />
     </div>
@@ -251,6 +265,23 @@ export const query = graphql`
     slug
     content
   }
+
+  allWordpressPost(limit: 4, sort: {fields: [date], order: [DESC] } ) {
+      edges {
+        node {
+          slug
+          id
+          title
+          date
+          excerpt
+          categories {
+            id
+            name
+            slug
+          }
+        }
+      }
+    }
 }
 `
 

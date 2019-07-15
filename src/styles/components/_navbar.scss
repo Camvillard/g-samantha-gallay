@@ -95,6 +95,10 @@
     background: none;
     padding: 0 4vw;
 
+    a {
+      margin: 0;
+    }
+
     img {
       width: 120px;
       height: 120px;
@@ -110,6 +114,7 @@
     padding-inline-start: 0px;
     padding-inline-end: 40px;
     padding-top: 20px;
+
     li {
       display: inline-block;
       margin-right: 2vw;
@@ -121,6 +126,7 @@
         padding: 2px 4px;
       }
     }
+
     li .active-link {
       border: 3px solid blue;
     }

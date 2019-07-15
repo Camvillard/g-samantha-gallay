@@ -15,3 +15,8 @@
 .button-white {
   @include button(white, $primary-color, $primary-color);
 }
+
+
+.btn-block {
+  display: block;
+}

@@ -16,7 +16,6 @@ import "../styles/components/_logo.scss"
 const Header = ({siteTitle, path}) => {
   return (
     <header id="site-header" >
-       <Link to="/"><Logo id="samanthagallay-logo"/></Link>
        <Navbar />
     </header>
   )

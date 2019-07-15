@@ -5,6 +5,7 @@
   padding: 8px 16px;
   border: 1px solid $border-color;
   text-transform: uppercase;
+  transition: all 0.3s ease;
   a {
     color: $text-color;
     text-decoration: none;

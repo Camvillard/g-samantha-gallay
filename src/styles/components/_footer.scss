@@ -11,7 +11,7 @@
 
   .footer-infos {
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .footer-infos:after {
@@ -62,32 +62,51 @@
 } // end of sm-screen - 768px
 
 @media (min-width: $md-screen) {
-  footer.desktop-footer {
-    // position: fixed;
-    // bottom: 0;
-    // width: 100vw;
-    // display: flex;
-    // padding-left: 3vw;
-    // padding-right: 3vw;
-    // justify-content: space-between;
-    // align-items: center;
+
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 42px;
+
+    .footer-infos,
+    .footer-meta {
+      flex: 0 1 auto;
+      margin: 0;
+    }
+
+    .footer-infos {
+      text-align: left;
+      font-size: 1.8rem;
+    }
+
+    .footer-infos:after {
+      content: none;
+    }
+
+    .footer-meta ul {
+      text-align: right;
+    }
 
     .footer-meta p,
     .footer-meta a{
       text-align: right;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
+      margin: 0;
     }
 
-    .footer-meta li a {
-      font-size: 1.4rem;
-      // margin-right: 10px;
+    .footer-meta a {
+      padding: 1px 4px;
+    }
+
+    .footer-meta a:hover {
+      background: white;
+      color: $bright-aqua;
     }
 
 
-    svg {
-      height: 1rem;
-    }
   }
+
 } // end of md-screen - 992px
 
 @media only screend and (min-width: $lg-screen) {

@@ -257,10 +257,12 @@
 
   #contact {
 
+
+
     .container {
       padding-top: 0;
       padding-bottom: 0;
-      height: calc(100vh - 142px);
+      min-height: calc(100vh - 142px);
       display: flex;
       flex-direction: column;
       justify-content: space-around;

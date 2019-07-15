@@ -35,7 +35,7 @@ module.exports = {
        includedRoutes: [
          "**/posts",
          "**/pages",
-         "**/tags",
+         "**/categories",
          "**/menus",
        ],
       },

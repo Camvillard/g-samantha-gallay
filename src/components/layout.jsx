@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 // internal data
 import Header from "./header"
 import Footer from "./footer"
-import Navbar from './navbar'
+// import Navbar from './navbar'
 
 // svg files
 
