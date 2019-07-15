@@ -5,8 +5,6 @@ import { graphql, Link } from "gatsby";
 // internal data
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Footer from '../components/footer';
-import Navbar from "../components/navbar";
 import PostCard from "../components/post-card";
 
 

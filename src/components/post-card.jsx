@@ -24,7 +24,7 @@ class PostCard extends React.Component {
         <div className="post-card-content">
 
           <h3 className="post-card-title">{post.title}</h3>
-          <p className="post-card-excerpt" dangerouslySetInnerHTML= {{__html: post.excerpt}} />
+          <div className="post-card-excerpt" dangerouslySetInnerHTML= {{__html: post.excerpt}} />
 
         </div>
 

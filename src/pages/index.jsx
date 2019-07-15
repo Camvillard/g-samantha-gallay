@@ -53,7 +53,7 @@ const IndexPage = ({data}) => {
 
             <div className="right-column">
               <h1><span>Samantha Gallay</span></h1>
-              <p dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
+              <div dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
             </div>
 
           </div>
