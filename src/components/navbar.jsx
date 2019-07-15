@@ -52,20 +52,28 @@ const DesktopMenu = (props) => {
 
 class Navbar extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      mobileNavbar: true
+    }
+  }
+
 
   componentDidMount() {
     // use the mobile toggle menu only for small screens
-    if (window.innerWidth < 992) {
-      toggleMenu();
+    if (window.innerWidth > 992) {
+      this.setState({mobileNavbar: false})
     }
+      toggleMenu();
   }
 
   render() {
     // choose wich component to render depending on the size of the screen
-    if (window.innerWidth > 992) {
-      return <DesktopMenu />
+    if (this.state.mobileNavbar) {
+      return <MobileMenu />
     }
-    return <MobileMenu />
+      return <DesktopMenu />
   }
 
 }
