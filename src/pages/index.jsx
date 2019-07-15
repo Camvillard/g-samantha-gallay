@@ -266,6 +266,7 @@ export const query = graphql`
           title
           date
           excerpt
+          content
           categories {
             id
             name

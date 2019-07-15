@@ -12,6 +12,9 @@ exports.createPages = ({ graphql, actions }) => {
               id
               slug
               wordpress_id
+              content
+              title
+              excerpt
             }
           }
         }
@@ -49,6 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               id
               slug
+              content
             }
           }
         }
