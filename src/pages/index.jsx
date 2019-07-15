@@ -7,8 +7,8 @@ import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import Footer from '../components/footer';
 import Navbar from "../components/navbar";
-import Logo from "../images/samanthagallay-logo_blanc.svg";
-import LogoBlanc from "../components/logo-blanc";
+// import Logo from "../images/samanthagallay-logo_blanc.svg";
+// import LogoBlanc from "../components/logo-blanc";
 
 // style
 import '../styles/main.scss';
@@ -193,13 +193,35 @@ const IndexPage = ({data}) => {
 
             <div className="two-columns white-column">
 
-              <form action="" className="form-stroked form-stroked-aqua">
 
-                <input type="text" placeholder="nom :"/>
-                <input type="email" placeholder="adresse mail :"/>
-                <input type="text" placeholder="objet :"/>
-                <textarea rows="8" placeholder="message"></textarea>
-                <button className="btn-aqua"><span>envoyer</span></button>
+            <form
+              name="contact-form"
+              method="post"
+              action="/thanks"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              className="form-stroked form-stroked-aqua"
+            >
+                <input hidden className="hidden" name="bot-field" />
+                <input type="text" name="nom" placeholder="nom :"/>
+                <input type="email" name="adresse mail" placeholder="adresse mail :"/>
+                <input type="text" name="objet du message" placeholder="objet :"/>
+                <textarea rows="8" name="message" placeholder="message"></textarea>
+                <div data-netlify-recaptcha />
+                <button className="btn-aqua" type="submit"><span>envoyer</span></button>
+
+            </form>
+
+            test
+
+              <form action="https://formspree.io/ca.villard@gmail.com" method="POST" className="form-stroked form-stroked-aqua">
+
+                <input type="hidden" name="_next" value="https://www.gallay-avocat.fr"/>
+                <input type="text" name="nom" placeholder="nom :"/>
+                <input type="email" name="adresse mail" placeholder="adresse mail :"/>
+                <input type="text" name="objet du message" placeholder="objet :"/>
+                <textarea rows="8" name="message" placeholder="message"></textarea>
+                <button className="btn-aqua" type="submit"><span>envoyer</span></button>
 
               </form>
 
