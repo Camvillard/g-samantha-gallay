@@ -1,7 +1,7 @@
 /*----- INDEX FOR LAYOUTS ----- */
 
 #body-page-contact {
-  background: $bright-aqua;
+  background: $light-aqua;
   min-height: 100vh;
   margin-top: 0;
 
@@ -28,7 +28,7 @@
   .contact-infos li {
     font-family: $accent-font;
     font-weight: 600;
-    color: white;
+    color: $dark-blue;
     font-size: 1.8rem;
     margin: 0 auto;
   }

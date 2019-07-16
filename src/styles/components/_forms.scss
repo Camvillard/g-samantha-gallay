@@ -19,23 +19,6 @@
     color: $bright-blue;
   }
 
-  ::placeholder,
-  ::-webkit-input-placeholder {
-    opacity: 0.7;
-    color: $bright-blue;
-    text-transform: uppercase;
-  }
-
-  input:hover,
-  textarea:hover {
-    background: $light-aqua;
-  }
-
-  input:focus,
-  textarea:focus {
-    outline: 1px solid $bright-aqua;
-    outline-offset: -1px;
-  }
 
   button {
     width: 100%;
@@ -49,11 +32,49 @@
     border-bottom: 1px solid $bright-aqua;
     color: $bright-blue;
   }
+  input:hover,
+  textarea:hover {
+    background: $light-aqua;
+    color: $dark-blue;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 1px solid $bright-aqua;
+    outline-offset: -1px;
+  }
 
   ::placeholder,
   ::-webkit-input-placeholder {
     color: $bright-aqua;
   }
+}
+
+.form-stroked-dark {
+  input, textarea {
+    border-bottom: 1px solid $dark-blue;
+    // color: white;
+  }
+
+  input:hover,
+  textarea:hover {
+    background: $light-aqua;
+    color: $bright-blue;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 1px solid $bright-blue;
+    outline-offset: -1px;
+  }
+
+
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    color: $dark-blue;
+  }
+
+
 }
 
 

@@ -50,7 +50,7 @@ class Contact extends React.Component {
                   action="/merci"
                   data-netlify="true"
                   netlify-honeypot="bot-field"
-                  className="form-stroked form-stroked-aqua"
+                  className="form-stroked form-stroked-dark"
                 >
                     <input hidden className="hidden" name="bot-field" />
                     <input type="text" name="name" placeholder="nom :"/>

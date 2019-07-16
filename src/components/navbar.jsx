@@ -24,7 +24,7 @@ const MobileMenu = (props) => {
       <div id="toggle-menu"><FaBars /></div>
       <ul id="main-menu" className="mobile-menu hidden">
         <li><Link to="/#presentation">à propos</Link></li>
-        <li><Link to="/#expertise">expertise</Link></li>
+        <li><Link to="/#expertise">domaines d'intervention</Link></li>
         <li><Link to="/#honoraires">honoraires</Link></li>
         <li><Link to="/#contact">contact</Link></li>
         <li><Link to="/nouvelles">nouvelles</Link></li>
@@ -41,7 +41,7 @@ const DesktopMenu = (props) => {
 
       <ul className="desktop-menu">
         <li><Link to="/#presentation">à propos</Link></li>
-        <li><Link to="/#expertise">expertise</Link></li>
+        <li><Link to="/#expertise">domaines d'intervention</Link></li>
         <li><Link to="/#honoraires">honoraires</Link></li>
         <li><Link to="/contact">contact</Link></li>
         <li><Link to="/nouvelles">nouvelles</Link></li>
