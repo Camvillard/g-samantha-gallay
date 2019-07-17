@@ -14,7 +14,7 @@ export default ({ data }) => {
   return (
     <Layout slug={page.slug}>
       <SEO id={page.title} title={page.title} keywords={[`gatsby`, `application`, `react`]} />
-      <div>
+      <div className="container">
         <h1 dangerouslySetInnerHTML= {{ __html: page.title}} />
         <div dangerouslySetInnerHTML= {{ __html: page.content}} />
       </div>

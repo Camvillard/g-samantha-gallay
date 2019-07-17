@@ -227,24 +227,6 @@ const IndexPage = ({data}) => {
       </div>
       {/* end of #contact */}
 
-      <div className="container">
-
-        <div id="nouvelles">
-          <h3 className="section-title"><span>les derniers articles</span></h3>
-
-          <div className="last-posts-content">
-            {posts.map( p => <PostCard post={p.node} key={p.node.id} />)}
-          </div>
-
-          <div className="btn-block btn-read-articles">
-            <Link to="/nouvelles" className="btn-blue">lire tous les articles</Link>
-          </div>
-
-        </div>
-
-      </div>
-
-
       <Footer />
     </div>
   )
