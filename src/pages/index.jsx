@@ -37,6 +37,8 @@ const IndexPage = ({data}) => {
             Fax : 05.56.01.18.95
           </p>
 
+          <p className="banner-mention"><span>Barreau de BORDEAUX</span></p>
+
         </div>
         {/* end of #homepage-banner */}
 

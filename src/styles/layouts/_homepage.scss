@@ -30,6 +30,14 @@
 
 }
 
+
+.banner-mention span {
+  background: $bright-blue;
+  color: white;
+  padding: 4px 8px;
+}
+
+
 @media (min-width: $md-screen) {
   #homepage {
     .homepage-section {
