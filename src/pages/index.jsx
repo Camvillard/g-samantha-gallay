@@ -16,7 +16,8 @@ import '../styles/main.scss';
 
 
 const IndexPage = ({data}) => {
-  const posts = data.allWordpressPost.edges
+  // const posts = data.allWordpressPost.edges
+  const pageData = data.wordpressPage
   return (
     <div id="homepage">
       <SEO title="Accueil" keywords={[`Samantha Gallay`, `avocat`, `Bordeaux`, `droit de la famille`, `droit des personnes`, `droit des mineurs`]} />
@@ -28,13 +29,11 @@ const IndexPage = ({data}) => {
 
           <img src="https://contenu.gallay-avocat.fr/wp-content/uploads/2019/07/logo_blanc-full.png" alt="logo samantha gallay"/>
           <p className="banner-adresse">
-            101 cours d'Albret  <br/>
-            33000 BORDEAUX
+            <span dangerouslySetInnerHTML= {{ __html: pageData.acf.address}}/>
           </p>
 
           <p className="banner-contact">
-            Tel : 05.56.01.18.00  <br/>
-            Fax : 05.56.01.18.95
+            <span dangerouslySetInnerHTML= {{ __html: pageData.acf.contact}}/>
           </p>
 
           <p className="banner-mention"><span>Barreau de BORDEAUX</span></p>
@@ -50,12 +49,12 @@ const IndexPage = ({data}) => {
           <div className="presentation-content">
 
             <div className="left-column">
-              <img src="https://contenu.gallay-avocat.fr/wp-content/uploads/2019/04/Sam_3_nb.jpg" alt="samantha gallay avocat"/>
+              <img src={pageData.acf.about_photo.url} alt="samantha gallay avocat"/>
             </div>
 
             <div className="right-column">
               <h1><span>Samantha Gallay</span></h1>
-              <div dangerouslySetInnerHTML= {{ __html: data.wordpressPage.content}}/>
+              <div dangerouslySetInnerHTML= {{ __html: pageData.acf.about_text}}/>
             </div>
 
           </div>
@@ -239,26 +238,15 @@ export const query = graphql`
 {
   wordpressPage (slug: {eq: "accueil"}) {
     slug
-    content
-  }
-
-  allWordpressPost(limit: 4, sort: {fields: [date], order: [DESC] } ) {
-      edges {
-        node {
-          slug
-          id
-          title
-          date
-          excerpt
-          content
-          categories {
-            id
-            name
-            slug
-          }
-        }
+    acf {
+      address
+      contact
+      about_photo {
+        url
       }
+      about_text
     }
+  }
 }
 `
 
