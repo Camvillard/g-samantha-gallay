@@ -75,7 +75,7 @@ const IndexPage = ({data}) => {
 
             <div className="expertise-field">
 
-              <h3>droit de la famille,  des personnes et de leur patrimoine</h3>
+              <h3>droit de la famille, des personnes et de leur patrimoine</h3>
               <ul>
                 <li>Mariage, Pacs, concubinage</li>
                 <li>Etat civil, changement de nom et prénom, adoption</li>
@@ -182,12 +182,12 @@ const IndexPage = ({data}) => {
             <div className="two-columns">
 
               <p className="tagline">
-              Pour tout renseignement complémentaire ou prise de rendez-vous, n’hésitez pas  à nous contacter.
+              Pour tout renseignement complémentaire ou prise de rendez-vous, n’hésitez pas à nous contacter.
               </p>
 
               <p className="adresse">
-                Samantha Gallay  <br/>
-                101 cours d'Albret  <br/>
+                Samantha Gallay <br/>
+                101 cours d'Albret <br/>
                 33000 Bordeaux
               </p>
 

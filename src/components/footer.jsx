@@ -14,7 +14,7 @@ class Footer extends React.Component {
       <footer className="main-footer">
 
         <p className="footer-infos accent-text text-italic">
-          Samantha Gallay  <br/>
+          Samantha Gallay <br/>
           101, Cours d'Albret <br/>
           33000 BORDEAUX
         </p>
