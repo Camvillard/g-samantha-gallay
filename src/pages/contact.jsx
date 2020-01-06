@@ -52,7 +52,7 @@ class Contact extends React.Component {
                   netlify-honeypot="bot-field"
                   className="form-stroked form-stroked-dark"
                 >
-                    <input hidden className="hidden" name="bot-field" />
+                    <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="Contact Form" />
                     <input type="text" name="name" placeholder="nom :"/>
                     <input type="email" name="email" placeholder="adresse mail :"/>

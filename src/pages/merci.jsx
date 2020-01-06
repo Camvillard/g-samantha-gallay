@@ -20,8 +20,9 @@ class Merci extends React.Component {
         <SEO title="Merci pour votre message" />
         <div id="page-merci">
 
-        <h3>Merci !</h3>
+        <h1>Merci !</h1>
         <p>Nous vous répondrons sous peu.</p>
+        <Link to ="/" className="btn-white">retour au site</Link>
 
         </div>
       </React.Fragment>
