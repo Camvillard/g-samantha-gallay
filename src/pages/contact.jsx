@@ -45,7 +45,7 @@ class Contact extends React.Component {
               <div className="contact-form-container">
 
                 <form
-                  name="form-contact"
+                  name="Contact Form"
                   method="post"
                   action="/merci"
                   data-netlify="true"
@@ -53,7 +53,7 @@ class Contact extends React.Component {
                   className="form-stroked form-stroked-dark"
                 >
                     <input hidden className="hidden" name="bot-field" />
-                    <input type="hidden" name="form-contact" value="Contact Form" />
+                    <input type="hidden" name="form-name" value="Contact Form" />
                     <input type="text" name="name" placeholder="nom :"/>
                     <input type="email" name="email" placeholder="adresse mail :"/>
                     <input type="text" name="subject" placeholder="objet :"/>
